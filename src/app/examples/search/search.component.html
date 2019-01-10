@@ -1,0 +1,50 @@
+
+<div class="page-header" filter-color="orange">
+    <div class="page-header-image" style="background-image:url(assets/img/login.jpg)"></div>
+    <div class="container">
+      <div class="col-md-4 content-center">
+      <div class="space-top">
+        contracts only
+        <bSwitch
+        [switch-on-color]="'default'"
+        [switch-off-color]="'default'"
+        [(ngModel)]="state_default">
+        </bSwitch>
+      </div>
+      <br/>
+      Amount TND
+      <nouislider class="slider slider-info" [connect]="true" [min]="0" [max]="1000" [step]="5" [(ngModel)]="doubleSlider" [tooltips]="true"></nouislider>
+      <br/>
+
+      <div ngbDropdown class="dropdown" placement="bottom-right">
+      <button class="btn btn-default dropdown-toggle" ngbDropdownToggle>Amount per</button>
+        <div ngbDropdownMenu>
+         <option class="dropdown-item" href="#">Hour</option>
+         <option class="dropdown-item" href="#">day</option>
+         <option class="dropdown-item" href="#">month</option>
+        </div>
+      </div>
+
+      <br/>
+
+      Start Date
+      <div class="datepicker-container">
+        <div class="form-group">
+        <input class="form-control datetimepicker" placeholder="06/07/2017"
+             name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+        </div>
+      </div>
+
+      <br/>
+
+      Distance KM
+      <nouislider class="slider slider-danger" [min]="0" [max]="100" [step]="1" [(ngModel)]="simpleSlider" [tooltips]="true"></nouislider>
+
+      <br/>
+      <button type="button" class="btn btn-default">Search</button>
+
+
+    </div>
+    
+    </div>
+</div>

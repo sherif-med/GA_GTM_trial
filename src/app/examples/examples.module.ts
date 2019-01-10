@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ExamplesComponent } from './examples.component';
 import { CreateComponent } from './create/create.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
     imports: [
@@ -28,7 +29,8 @@ import { CreateComponent } from './create/create.component';
         LoginComponent,
         ExamplesComponent,
         ProfileComponent,
-        CreateComponent
+        CreateComponent,
+        SearchComponent
     ]
 })
 export class ExamplesModule { }
